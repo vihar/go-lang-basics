@@ -184,6 +184,7 @@ func main(){
 ```
 
 ### Loops in GO
+
 Loops help you repeat stuff, kind of automating things. In Go for loops can be written in different styles. Below are the code snippets how you can write them,
 
 Go lang doesn't have while loops, instead the syntax can be used similarly to that with the `for` keyword. We initialize the variable, give it the condition and then iterate, as soon as the condition turns false, the loop terminates.
@@ -212,3 +213,83 @@ for {
     break
 }
 ```
+
+### Arrays in GO
+
+Arrays store multiple variables of the same datatype. In Go, we declare arrays using "Square Braces" `[]`. We give the type of array, and the number of elements array needs to carry. By default, an array is zero-valued, which for integer types - 0s.
+
+```go
+package main
+import "fmt"
+
+func main(){
+    var numbers[7] int;
+
+    fmt.Println(numbers)
+}
+```
+The above code snippet creates an array of seven zeros.
+
+We can assign the values of elements by using the indices of the arrays, In Go, the indices start with 0, say if we want to change the value in the 4th element we need to use the third index `a[3]=19`.
+
+If we want to manually initialise the elements in the array we need to use `{}`. Below is the code snippet, 
+
+```
+package main
+import "fmt"
+
+func main(){
+    var primes = [5]int{2, 3, 5, 7, 11}
+    fmt.Println(primes)
+}
+```
+
+We can iterate arrays over loops, to find the values in them or want to manipulate anything. Below is the example, 
+
+
+```go
+package main
+import "fmt"
+
+func main(){
+    var i = 0
+    for i=0; i<5; i++{
+        fmt.Println(primes[i])
+    }
+}
+```
+
+### Slices in GO
+
+Unlike arrays, slices are typed only by the elements they contain (not the number of elements). We can add elements to arrays by using `append` method. Slices support copying and removing elements too. To create an empty slice with non-zero length, use the builtin `make`. We can use the `len` method to find the total number of elements present in the slices.
+
+In addition to these basic operations, slices support several more that make them richer than arrays. One is the builtin append, which returns a slice containing one or more new values.
+
+```go
+package main
+import "fmt"
+
+
+func main() {
+    numbers := make([]int, 3)
+
+    fmt.Println(numbers)
+
+    
+    numbers = append(numbers, 12)
+    numbers = append(numbers, 13, 14)
+
+    fmt.Println(numbers)
+}
+```
+
+
+
+
+
+
+
+
+
+
+
