@@ -160,3 +160,55 @@ func main(){
     }
 }
 ```
+
+**Nested if-else**
+If you have multiple conditions to check(more than two) you can nest using `else if` statements. This is aslo called as nesting conditionals.
+
+```go
+package main
+import "fmt"
+
+func main(){
+    var water = 0;
+
+    if(water>20) {
+        fmt.Println("Fill Water to 40")
+    } else if (water>40){
+        fmt.Println("Water is full!")
+    } else if (water==0){
+        fmt.Println("Please buy some water!")
+    } else{
+        fmt.Println("Do Nothing!")
+    }
+}
+```
+
+### Loops in GO
+Loops help you repeat stuff, kind of automating things. In Go for loops can be written in different styles. Below are the code snippets how you can write them,
+
+Go lang doesn't have while loops, instead the syntax can be used similarly to that with the `for` keyword. We initialize the variable, give it the condition and then iterate, as soon as the condition turns false, the loop terminates.
+
+```go
+var i = 1
+for i<5 {
+    fmt.Println(i)
+    i = i+1
+}
+
+```
+
+This is the generic way of writing `for` loops in GO, we first initialize the variable, then give the condition and then iterate it. Until the condition is true the loop keeps on continuing, once the condition is false, it proceeds to the next statements.
+
+```go
+for i = 1; i < 5; i++ {
+    fmt.Println(i)
+}
+```
+
+Infinite loops are fun, In Go, we can write an endless loop by merely using `for` and not giving any conditions, by default it takes the condition true leaving the loop to be infinite. You need to break it by hitting `CTRL + C`
+```go
+for {
+    fmt.Println("I am Infinite")
+    break
+}
+```
