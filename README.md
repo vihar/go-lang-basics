@@ -141,3 +141,22 @@ func main() {
     }
 }
 ```
+
+**You can also have multiple if-statements**, below is the code snippet where we use multiple if-statements to find if the given number is even or odd, if the conditions inside the `if` block isn't satisfied the statements will just be passed on.
+
+```go
+package main
+import "fmt"
+
+func main(){
+    var number = 5
+
+    if number % 2 == 0 {
+        fmt.Println("Even Number")
+    }
+
+    if number % 2 !=0 {
+        fmt.Println("Odd Number")
+    }
+}
+```
