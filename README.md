@@ -303,8 +303,41 @@ func main() {
 In the above code snippet, as we mentioned functions could return variables, the return type should be specified after the arguments are given, in the above case the return type of the function is `int`.
 
 
+### Structures in GO
 
+Before getting started, Have this question run in your mind?
 
+Is GO Lang an Object Oriented Language?
 
+Answer.Yes and no. Although Go has types and methods and allows an object-oriented style of programming, there is no type hierarchy. The concept of “interface” in Go provides a different approach that we believe is easy to use and in some ways more general. Go’s structs are typed collections of fields. They’re useful for grouping data together to form records. These are similar to Classes and Objects.
+
+```go
+package main
+import "fmt"
+
+type person struct {
+    name string
+    age int
+    addr string
+    phone int
+    access bool
+}
+
+func main() {
+    fmt.Println(person{"Vihar", 21, "Hyd", 9999, false})
+
+    vihar := person{"Vihar", 21, "Hyd", 9999, false}
+    fmt.Println(vihar)
+
+    unknown:= person{"Unknown", 00, "Unknown", 00, false}
+    fmt.Println(unknown)
+    fmt.Println(unknown.age)
+
+    duplicate := &vihar
+    fmt.Println("###############")
+    fmt.Println(duplicate.age)
+}
+```
+To order the fields of a structure we need to use the `dot` operator. Structures are mutable, which means you can add new fields, remove them whenever modifications are required.
 
 
