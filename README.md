@@ -14,7 +14,6 @@ In our first program we have imported the package “fmt” for using the functi
 Println is the function used to print strings in "go" similar to `print()` in Python.
 The package “fmt” comes from the Go standard library. 
 
-
 ### Variables in Go
 
 In Go we declare variables using the keyword `var` followed by the variable name,
@@ -51,5 +50,94 @@ func main(){
 
     var bool_value = true
     fmt.Println(bool_value)
+}
+```
+
+### Value Operations in GO
+
+In Go, similar to other programming languages we can apply all the arithmetic and logical operations on variables or values. Below is the example how you can use the operations, for arithmetics we can directly use `+`, `-`, `*`, `/` . To perform a logical `and` operation we use `&&`, and to perform a logical `or` we us `||`.
+
+```go
+package main
+import "fmt"
+
+func main(){
+    fmt.Println("Let's ask Go the values")
+    fmt.Println("Addition", 2+2)
+    fmt.Println("Subtraction", 2-2)
+    fmt.Println("Multiplication", 2*2)
+    fmt.Println("Division", 2/2)
+
+    fmt.Println("Logical AND true, true", true && true)
+    fmt.Println("Logical AND true, false", true && false)
+    fmt.Println("Logical AND false, true", false && true)
+    fmt.Println("Logical AND false, false", false && false)
+
+    fmt.Println("Logical OR true, true", true || true)
+    fmt.Println("Logical OR true, false", true || false)
+    fmt.Println("Logical OR false, true", false || true)
+    fmt.Println("Logical OR false, false", false || false)
+
+    fmt.Println(!true)
+}
+```
+
+### Comments in GO
+
+For a programmer, comments help to document and debug things more efficiently, In "Go Lang" we do it the C-Way. Comments in GO are similar to comments in C or C++. We use `//` for single line comments and `/* */` for multiple line comments. Everything that goes inside the astrids doesn't work.
+
+```go
+package main
+
+import "fmt"
+
+func main(){
+
+    // fmt.Println("This doesn't print :/")
+
+    fmt.Println("This Works")
+
+    /*
+        Code doesn't work her!
+    */
+}
+```
+
+### Constants in GO
+
+Constants in GO can perform arthematics with arbitary precisions. A numeric constant has no type until it’s given one, such as by an explicit cast.
+
+```go
+package main
+
+import "fmt"
+
+const name string = "Keats"
+func main(){
+    fmt.Println(name)
+    const n = 500000000
+    const a = 3e20 / n
+    fmt.Println(a)
+    fmt.Println(int64(a))
+}
+```
+
+### Conditionals In GO
+
+The order in which the program carries instructions is called Control Flow. Conditionals are only run if certain conditions are met. If the given condition is true, the specific set of instructions are run, else the other set of instructions are executed. In "Go" we do it condition by using `if` and `else` keywords. Without an `if` there can't be an else statement.
+
+```go
+package main
+import "fmt"
+
+func main() {
+    var emergency = true
+
+    if emergency==true {
+        fmt.Println("Apply First-Aid")
+    }
+    else{
+        fmt.Println("Take Some Rest!")
+    }
 }
 ```
