@@ -283,9 +283,24 @@ func main() {
 }
 ```
 
+### Functions in GO
 
+Functions are reusable pieces of code, once the functions are declared we can call them a number of times. We have already been using our `main()` function, the main function is invoked as soon as the program is run, we need not explicitly call it. Functions in GO are declared using the keyword `func` followed by the function name. They can take in arguments, and return datatypes. Let's now write our first example function,
 
+```go
+package main
+import "fmt"
+func add(a int, b int) int{
+    return a+b
+}
 
+func main() {
+
+    c  := add(2, 3)
+    fmt.Println(c)
+}
+```
+In the above code snippet, as we mentioned functions could return variables, the return type should be specified after the arguments are given, in the above case the return type of the function is `int`.
 
 
 
